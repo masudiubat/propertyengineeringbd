@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Frontend;
 
+use App\Product;
 use App\Project;
 use App\ProjectCategory;
 use Illuminate\Http\Request;
@@ -14,6 +15,8 @@ class WelcomeController extends Controller
         $projectCategories = ProjectCategory::with('projects')->get();
         $projects = Project::with('project_categories')->get();
 
-        return view('welcome', ['projectCategories' => $projectCategories, 'projects' => $projects]);
+        $products = Product::with('product_categories')->orderBy('id', 'DESC')->take(5)->get();
+
+        return view('welcome', ['products' => $products, 'projectCategories' => $projectCategories, 'projects' => $projects]);
     }
 }

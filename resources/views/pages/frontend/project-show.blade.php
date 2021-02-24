@@ -51,106 +51,34 @@
                 <hr>
                 <ul class="list-unstyled product_info mtb_30">
                     <li>
-                        <label>Brand:</label>
-                        <span> <a href="#">Apple</a></span>
+                        <label>Area:</label>
+                        <span>{{$project->area}}</span>
                     </li>
                     <li>
-                        <label>Product Code:</label>
-                        <span> product 20</span>
+                        <label>Status:</label>
+                        <span>{{$project->status}}</span>
                     </li>
                     <li>
-                        <label>Availability:</label>
-                        <span> In Stock</span>
+                        <label>Start Date:</label>
+                        <span>{{ date("M d, Y", strtotime($project->start_date)) }}</span>
+                    </li>
+                    <li>
+                        <label>Finish Date:</label>
+                        <span>{{ date("M d, Y", strtotime($project->finish_date)) }}</span>
                     </li>
                 </ul>
-                <hr>
-                <p class="product-desc mtb_30"> More room to move. With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go. Cover Flow. Browse through your music collection by flipping..</p>
-                <div id="product">
-                    <div class="form-group">
-                        <div class="row">
-                            <div class="Sort-by col-md-6">
-                                <label>Sort by</label>
-                                <select name="product_size" id="select-by-size" class="selectpicker form-control">
-                                    <option>Small</option>
-                                    <option>Medium</option>
-                                    <option>Large</option>
-                                </select>
-                            </div>
-                            <div class="Color col-md-6">
-                                <label>Color</label>
-                                <select name="product_color" id="select-by-color" class="selectpicker form-control">
-                                    <option>Blue</option>
-                                    <option>Green</option>
-                                    <option>Orange</option>
-                                    <option>White</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="qty mt_30 form-group2">
-                        <label>Qty</label>
-                        <input class="sc-cart-item-qty" name="product_quantity" min="1" value="1" type="number">
-                    </div>
-                    <div class="button-group mt_30">
-                        <div class="wishlist"><a href="#"><i class="fa fa-heart-o" aria-hidden="true"></i><span>wishlist</span></a></div>
-                        <div class="quickview"><a href="#"><i class="fa fa-eye" aria-hidden="true"></i><span>Quick View</span></a></div>
-                        <div class="compare"><a href="#"><i class="fa fa-exchange" aria-hidden="true"></i><span>Compare</span></a></div>
-                        <div class="add-to-cart sc-add-to-cart"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>Add to cart</span></a></div>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
                 <div id="exTab5" class="mtb_30">
                     <ul class="nav nav-tabs">
-                        <li class="active"> <a href="#1c" data-toggle="tab">Overview</a> </li>
-                        <li><a href="#2c" data-toggle="tab">Reviews (1)</a> </li>
-                        <li><a href="#3c" data-toggle="tab">Solution</a> </li>
+                        <li class="active"> <a href="#1c" data-toggle="tab">Description</a> </li>
+
                     </ul>
                     <div class="tab-content ">
                         <div class="tab-pane active" id="1c">
-                            <p>CLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis malesuada mi id tristique. Sed ipsum nisi, dapibus at faucibus non, dictum a diam. Nunc vitae interdum diam. Sed finibus, justo vel maximus facilisis, sapien turpis euismod tellus, vulputate semper diam ipsum vel tellus.</p>
-                        </div>
-                        <div class="tab-pane" id="2c">
-                            <form class="form-horizontal">
-                                <div id="review"></div>
-                                <h4 class="mt_20 mb_30">Write a review</h4>
-                                <div class="form-group required">
-                                    <div class="col-sm-12">
-                                        <label class="control-label" for="input-name">Your Name</label>
-                                        <input name="name" value="" id="input-name" class="form-control" type="text">
-                                    </div>
-                                </div>
-                                <div class="form-group required">
-                                    <div class="col-sm-12">
-                                        <label class="control-label" for="input-review">Your Review</label>
-                                        <textarea name="text" rows="5" id="input-review" class="form-control"></textarea>
-                                        <div class="help-block"><span class="text-danger">Note:</span> HTML is not translated!</div>
-                                    </div>
-                                </div>
-                                <div class="form-group required">
-                                    <div class="col-md-6">
-                                        <label class="control-label">Rating</label>
-                                        <div class="rates"><span>Bad</span>
-                                            <input name="rating" value="1" type="radio">
-                                            <input name="rating" value="2" type="radio">
-                                            <input name="rating" value="3" type="radio">
-                                            <input name="rating" value="4" type="radio">
-                                            <input name="rating" value="5" type="radio">
-                                            <span>Good</span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="buttons pull-right">
-                                            <button class="btn btn-md btn-link">Continue</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="tab-pane" id="3c">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lobortis malesuada mi id tristique. Sed ipsum nisi, dapibus at faucibus non, dictum a diam. Nunc vitae interdum diam. Sed finibus, justo vel maximus facilisis, sapien turpis euismod tellus, vulputate semper diam ipsum vel tellus.applied clearfix to the tab-content to rid of the gap between the tab and the content</p>
+                            <p>{{$project->description}}</p>
                         </div>
                     </div>
                 </div>
@@ -159,7 +87,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="heading-part text-center">
-                    <h2 class="main_title mt_50 mb_30">Related Products</h2>
+                    <h2 class="main_title mt_50 mb_30">Related Project</h2>
                 </div>
             </div>
         </div>

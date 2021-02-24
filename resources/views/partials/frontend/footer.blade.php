@@ -5,22 +5,22 @@
             <div class="col-md-3 mtb_40 text-left wow fadeInUp" data-wow-delay=".2s">
                 <h4 class="footer-title ptb_20 light uppr ">Contact Us</h4>
                 <ul>
-                    <li>B-14 Collins Street West Victoria 2386 lorems colerfes state</li>
-                    <li>(+123) 456 789 - (+024) 666 888</li>
-                    <li>Contact@yourcompany.com</li>
+                    <li>House # 15, Road # 14, Nikunja-2, Khilkhet, Dhaka 1229</li>
+                    <li>+8801712-687049</li>
+                    <li>info.propertyengineeringbd@gmail.com</li>
                 </ul>
             </div>
             <div class="col-md-6 wow fadeInUp" data-wow-delay=".4s">
-                <div class="footer-logo mt_20 mb_20"> <a href="{{url('/')}}"> <img src="{{asset('assets/images/brand/logo-white.png')}}" alt="Civil Engineer"> </a> </div>
+                <div class="footer-logo mt_20 mb_20"> <a href="{{url('/')}}"> <img src="{{asset('storage/images/brand/logo60.png')}}" alt="Civil Engineer"> </a> </div>
                 <div class="footer-link">
                     <ul>
-                        <li><a href="index-2.html">Home </a></li>
-                        <li><a href="about.html">About us</a></li>
-                        <li><a href="portfolio_2col_grid.html">Projects</a></li>
-                        <li><a href="blog_2col_grid.html">Blog</a></li>
-                        <li> <a href="team.html">Team</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="{{url('/')}}">Home </a></li>
+                        <li><a href="{{route('about.us')}}">About us</a></li>
+                        <li><a href="{{route('project')}}">Projects</a></li>
+                        <li><a href="{{route('product')}}">Products</a></li>
+                        <li> <a href="{{route('gallery')}}">Gallery</a></li>
+                        <li><a href="{{route('blog')}}">Blog</a></li>
+                        <li><a href="{{route('contact')}}">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="copyright-part mtb_10">@ 2021 All Rights Reserved Property Engineer</div>
